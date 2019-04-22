@@ -3,7 +3,7 @@ package com.altenchallenge.repository;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
-import com.altenchallenge.entity.VehicleStatus;
+import com.altenchallenge.entity.Vehiclestatus;
 
 /**
  * This will be AUTO IMPLEMENTED by Spring into a Bean called
@@ -12,6 +12,6 @@ import com.altenchallenge.entity.VehicleStatus;
  * @author Taha
  */
 @Repository
-public interface VehicleStatusRepository extends PagingAndSortingRepository<VehicleStatus, Integer> {
+public interface VehicleStatusRepository extends PagingAndSortingRepository<Vehiclestatus, Integer> {
 
 }

@@ -2,7 +2,6 @@ package com.altenchallenge.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 /**
@@ -16,11 +15,12 @@ public class Vehicle {
 
 	private String regNo;
 
-	private VehicleStatus status;
+	@ManyToOne(targetEntity=Customer.class)
+	private Customer customer;	
+	
+	@ManyToOne(targetEntity=Vehiclestatus.class)
+	private Vehiclestatus status;
 
-	@ManyToOne
-	@JoinColumn
-	private Customer customer;
 
 	public String getVehicleId() {
 		return vehicleId;
@@ -38,11 +38,11 @@ public class Vehicle {
 		this.regNo = regNo;
 	}
 
-	public VehicleStatus getStatus() {
+	public Vehiclestatus getStatus() {
 		return status;
 	}
 
-	public void setStatus(VehicleStatus status) {
+	public void setStatus(Vehiclestatus status) {
 		this.status = status;
 	}
 

@@ -1,14 +1,13 @@
 package com.altenchallenge.entity;
 
-import java.util.Set;
-
+import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 
 /**
  * @author Taha
  *
  */
+@Entity
 public class Customer {
 
 	@Id
@@ -18,8 +17,8 @@ public class Customer {
 
 	private String address;
 
-	@OneToMany(mappedBy = "customer")
-	private Set<Vehicle> vehicles;
+//	@OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
+//	private Set<Vehicle> vehicles;
 
 	public Long getId() {
 		return id;
@@ -45,12 +44,12 @@ public class Customer {
 		this.address = address;
 	}
 
-	public Set<Vehicle> getVehicles() {
-		return vehicles;
-	}
-
-	public void setVehicles(Set<Vehicle> vehicles) {
-		this.vehicles = vehicles;
-	}
+//	public Set<Vehicle> getVehicles() {
+//		return vehicles;
+//	}
+//
+//	public void setVehicles(Set<Vehicle> vehicles) {
+//		this.vehicles = vehicles;
+//	}
 
 }

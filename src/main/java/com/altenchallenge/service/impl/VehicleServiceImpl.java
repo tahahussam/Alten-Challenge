@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 
 import com.altenchallenge.entity.Customer;
 import com.altenchallenge.entity.Vehicle;
-import com.altenchallenge.entity.VehicleStatus;
+import com.altenchallenge.entity.Vehiclestatus;
 import com.altenchallenge.exception.NotValidCustomerException;
 import com.altenchallenge.exception.NotValidStatusException;
 import com.altenchallenge.repository.CustomerRepository;
@@ -87,7 +87,7 @@ public class VehicleServiceImpl implements IVehicleService, ICommonService {
 	@Override
 	public List<Vehicle> filterVehicleByStatus(int status, int... pageDetails) throws Exception {
 		try {
-			Optional<VehicleStatus> vehicleStatus = vehicleStatusRepository.findById(status);
+			Optional<Vehiclestatus> vehicleStatus = vehicleStatusRepository.findById(status);
 
 			if (vehicleStatus.isPresent()) {
 				logger.debug("trying to get Vehicles fot status {}", vehicleStatus.get());

@@ -8,12 +8,12 @@ import javax.persistence.Id;
  *
  */
 @Entity
-public class VehicleStatus {
+public class Vehiclestatus {
 
 	@Id
 	private Integer id;
 
-	private String status;
+	private String statusType;
 
 	public Integer getId() {
 		return id;
@@ -23,12 +23,12 @@ public class VehicleStatus {
 		this.id = id;
 	}
 
-	public String getStatus() {
-		return status;
+	public String getStatusType() {
+		return statusType;
 	}
 
-	public void setStatus(String status) {
-		this.status = status;
+	public void setStatusType(String statusType) {
+		this.statusType = statusType;
 	}
 
 }

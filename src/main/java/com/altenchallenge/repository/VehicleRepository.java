@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import com.altenchallenge.entity.Customer;
 import com.altenchallenge.entity.Vehicle;
-import com.altenchallenge.entity.VehicleStatus;
+import com.altenchallenge.entity.Vehiclestatus;
 
 /**
  * This will be AUTO IMPLEMENTED by Spring into a Bean called VehicleRepository CRUD
@@ -20,6 +20,6 @@ public interface VehicleRepository extends PagingAndSortingRepository<Vehicle, S
 
 	Page<Vehicle> findByCustomer(Customer customer, Pageable page);
 
-	Page<Vehicle> findByStatus(VehicleStatus status, Pageable page);
+	Page<Vehicle> findByStatus(Vehiclestatus status, Pageable page);
 
 }
